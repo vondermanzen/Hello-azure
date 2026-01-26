@@ -75,6 +75,15 @@ You can commit some changes to your repository and watch how the service is upda
 </details>
 
 <details>
+<summary><h2>Using a custom domain</h2></summary>
+
+If you want to use a custom domain, go to Settings then Custom Domains in App Services and follow the instructions. If you are not using Azure DNS, you will be asked to create the DNS records in your Cloudflare, Route 53 or other account. 
+
+![Linking the domain](README_images/custom_domain.png)
+
+</details>
+
+<details>
 <summary><h2>Cleaning up</h2></summary>
 
 The simplest way to delete all the resources you just created is to type "Resource Groups" in the search bar and delete the group that you created earlier.
