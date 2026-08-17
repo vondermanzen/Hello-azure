@@ -17,6 +17,8 @@ This course is available for multiple cloud providers. Choose your preferred pla
 git clone https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-azure.git
 ```
 
+<img width="452" height="289" alt="image" src="https://github.com/user-attachments/assets/f9efe091-a047-467c-b35f-19565a9b3b7f" />
+
 ***
 </details>
 
@@ -26,8 +28,6 @@ git clone https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-azure
 ```bash
 git archive --format=zip --output=output.zip HEAD
 ```
-
-<img width="452" height="289" alt="image" src="https://github.com/user-attachments/assets/f9efe091-a047-467c-b35f-19565a9b3b7f" />
 
 ***
 </details>
@@ -127,7 +127,7 @@ https://www.python.org/downloads/
 <summary>Install dependencies</summary>
 
 ```	
-	 python -m pip install --break-system-packages -r requirements.txt
+python -m pip install --break-system-packages -r requirements.txt
 ```
 
 ***
@@ -136,7 +136,7 @@ https://www.python.org/downloads/
 <summary>Run flask</summary>
 
 ```	
-	 python -m flask run --port=80
+python -m flask run --port=80
 ```
 
 Open localhost in your browser.   
