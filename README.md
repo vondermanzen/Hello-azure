@@ -11,66 +11,60 @@ This course is available for multiple cloud providers. Choose your preferred pla
 # Instructions
 
 <details>
-<summary>Step 1. Fork (or make a copy of) this repository</summary>
+<summary>Clone this repository (Optional: fork it)</summary>
 
-<img width="414" height="370" alt="image" src="https://github.com/user-attachments/assets/6d89a2ee-37ab-4f32-aaa7-b50a79fc222d" />
+```bash
+git clone https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-azure.git
+```
 
 ***
 </details>
+
 <details>
-<summary>Step 2. Go to the Microsoft Azure front page and type "App Services" in the search bar</summary>
+<summary>Zip the repository</summary>
 
-<img width="1257" height="276" alt="image" src="https://github.com/user-attachments/assets/fbc22fe7-d8dc-441c-982b-8f8e56af322c" />
+```bash
+git archive --format=zip --output=output.zip HEAD
+```
+
+<img width="452" height="289" alt="image" src="https://github.com/user-attachments/assets/f9efe091-a047-467c-b35f-19565a9b3b7f" />
 
 ***
 </details>
+
 <details>
-<summary>Step 3. Go to Create -> Web App</summary>
+<summary>Go to App Service/Create/Web App. Create a new App Service with default settings, a Basic plan, at least 1 CPU / 1 GB RAM. When prompted, create a new resource group "rg-hello-azure". Select the latest Python runtime (3.14). </summary>
 
-<img width="929" height="276" alt="image" src="https://github.com/user-attachments/assets/8f188226-bcb0-480a-b7b5-8c8d9341c59b" />
-
-***
-</details>
-<details>
-<summary>Step 4. Create a new resource group for your application</summary>
-
-<img width="745" height="317" alt="image" src="https://github.com/user-attachments/assets/23650a38-4f94-4db8-9172-cae9ab635672" />
+<img width="1005" height="333" alt="image" src="https://github.com/user-attachments/assets/26261a28-92c4-4eaf-a033-bb437369a33c" />
 
 ***
 </details>
-<details>
-<summary>Step 5. Choose an instance name. Select the latest Python runtime, Linux, and a region (UK South)</summary>
 
-<img width="1045" height="956" alt="image" src="https://github.com/user-attachments/assets/c1da28c8-b9e5-49d1-be83-6877b8c42f30" />
+The app should now be publicly accessible. 
 
-***
-</details>
-<details>
-<summary>Step 6. Go to Deployment, set "Continuous Deployment" to "Enable" and select your repository</summary>
-
-<img width="1071" height="957" alt="image" src="https://github.com/user-attachments/assets/5817dafd-f510-4dbe-a2b9-eec6d9f163b9" />
-
-***
-</details>
-<details>
-<summary>Step 7. You can maintain public access for now (Anyone with the link will be able to access your app).</summary>
-
-<img width="393" height="167" alt="image" src="https://github.com/user-attachments/assets/9c72a5b5-9ac7-4b19-8824-6d2f6621fef7" />
-
-***
-</details>
-Create the app and wait for deployment. Voilà! Access the URL.
-
-<img width="771" height="381" alt="image" src="https://github.com/user-attachments/assets/cdbb09be-0996-4696-8fdb-af7a819ea79b" />
+<img width="586" height="298" alt="image" src="https://github.com/user-attachments/assets/ad0f9d95-a693-4a2a-86d9-d6282c0850b1" />
 
 ***
 
 # Going further
 
 <details>
-<summary><h2>Modifying the code</h2></summary>
+<summary><h2>Zipping changes</h2></summary>
 
-You can commit some changes to your repository and watch how the service is updated automatically. 
+The previous command will only zip committed changes. Change the command to be able to include uncommitted changes. 
+
+```bash
+zip -r output.zip . -x ".git/*"
+```
+
+</details>
+
+<details>
+<summary><h2>Continuous deployment</h2></summary>
+
+You can create your own git repository and set it as the source. Pushing commits to GitHub will now update the app automatically. 
+
+<img width="782" height="381" alt="image" src="https://github.com/user-attachments/assets/4e868748-0d38-4435-acc4-fe522a512476" />
 
 </details>
 
@@ -118,19 +112,10 @@ Then test your endpoint
 <details>
 <summary><h2>Local testing</h2></summary>
 
-After a while, it's not fun anymore to wait for deployment. You want to test your changes before. 
+You need to test your changes before publishing them. 
 
 <details>
-<summary>Step 1. Install git and clone the repository on your local machine</summary>
-
-```	
-	git clone {repository_link}
-```
-
-***
-</details>
-<details>
-<summary>Step 2. Install Python</summary>
+<summary>Install Python</summary>
 
 ```	
 https://www.python.org/downloads/
@@ -139,19 +124,19 @@ https://www.python.org/downloads/
 ***
 </details>
 <details>
-<summary>Step 3. Install dependencies</summary>
+<summary>Install dependencies</summary>
 
 ```	
-	 sudo python -m pip install --break-system-packages -r requirements.txt
+	 python -m pip install --break-system-packages -r requirements.txt
 ```
 
 ***
 </details>
 <details>
-<summary>Step 4. Run flask</summary>
+<summary>Run flask</summary>
 
 ```	
-	 sudo python -m flask run --port=80
+	 python -m flask run --port=80
 ```
 
 Open localhost in your browser.   
