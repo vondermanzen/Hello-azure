@@ -42,7 +42,7 @@ git archive --format=zip --output=output.zip HEAD
 
 The app should now be publicly accessible. 
 
-<img width="589" height="324" alt="image" src="https://github.com/user-attachments/assets/d6531cb6-76ad-409e-89d9-84cd1d63774f" />
+<img width="586" height="298" alt="image" src="https://github.com/user-attachments/assets/ad0f9d95-a693-4a2a-86d9-d6282c0850b1" />
 
 ***
 
