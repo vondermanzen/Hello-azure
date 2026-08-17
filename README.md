@@ -40,6 +40,13 @@ git archive --format=zip --output=output.zip HEAD
 ***
 </details>
 
+<details>
+<summary>Go to Deployment/Deployment Center/Manual Deployment and upload the zip file that you created earlier</summary>
+
+<img width="1510" height="498" alt="image" src="https://github.com/user-attachments/assets/c3258534-d62b-458d-a489-2677fdc1e6be" />
+***
+</details>
+
 The app should now be publicly accessible. 
 
 <img width="586" height="298" alt="image" src="https://github.com/user-attachments/assets/ad0f9d95-a693-4a2a-86d9-d6282c0850b1" />
