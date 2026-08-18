@@ -17,7 +17,7 @@ This course is available for multiple cloud providers. Choose your preferred pla
 git clone https://github.com/Oxford-Research-Cloud-Competency-Centre/Hello-azure.git
 ```
 
-<img width="452" height="289" alt="image" src="https://github.com/user-attachments/assets/f9efe091-a047-467c-b35f-19565a9b3b7f" />
+<img width="409" height="255" alt="image" src="https://github.com/user-attachments/assets/31ebd845-6692-43b9-ba98-125425bc0287" />
 
 ***
 </details>
@@ -33,9 +33,9 @@ git archive --format=zip --output=output.zip HEAD
 </details>
 
 <details>
-<summary>Go to App Service/Create/Web App. Create a new App Service with default settings, a Basic plan, at least 1 CPU / 1 GB RAM. When prompted, create a new resource group "rg-hello-azure". Select the latest Python runtime (3.14). </summary>
+<summary>Go to App Service/Create/Web App. Create a new App Service titled "hello-azure" with default settings, a Basic B1 plan (at least 1 VCPU / 1 GB RAM). When prompted, create a new resource group "rg-hello-azure". Select the latest Python runtime (3.14). </summary>
 
-<img width="1005" height="333" alt="image" src="https://github.com/user-attachments/assets/26261a28-92c4-4eaf-a033-bb437369a33c" />
+<img width="1002" height="332" alt="image" src="https://github.com/user-attachments/assets/0c98e83c-4e24-4950-b583-bb1023ad9d8a" />
 
 ***
 </details>
@@ -44,6 +44,7 @@ git archive --format=zip --output=output.zip HEAD
 <summary>Go to Deployment/Deployment Center/Manual Deployment and upload the zip file that you created earlier</summary>
 
 <img width="1510" height="498" alt="image" src="https://github.com/user-attachments/assets/c3258534-d62b-458d-a489-2677fdc1e6be" />
+
 ***
 </details>
 
@@ -69,7 +70,7 @@ zip -r output.zip . -x ".git/*"
 <details>
 <summary><h2>Continuous deployment</h2></summary>
 
-You can create your own git repository and set it as the source. Pushing commits to GitHub will now update the app automatically. 
+You can create your own git repository and set it as the source in Deployment/Deployment Center. Pushing commits to GitHub will now update the app automatically. 
 
 <img width="782" height="381" alt="image" src="https://github.com/user-attachments/assets/4e868748-0d38-4435-acc4-fe522a512476" />
 
@@ -78,18 +79,18 @@ You can create your own git repository and set it as the source. Pushing commits
 <details>
 <summary><h2>Using a custom domain</h2></summary>
 
-If you want to use a custom domain, go to Settings then Custom Domains in App Services and follow the instructions. If you are not using Azure DNS, you will be asked to create the DNS records in your Cloudflare, Route 53 or other account. 
+In Settings/Custom Domains you can setup a custom domain with SSL certificates. If your domain wasn't purchased in Azure, instructions are provided to setup DNS records externally (Cloudflare, Route 53).
 
-<img width="516" height="708" alt="image" src="https://github.com/user-attachments/assets/283f23fe-e2a0-44f6-8918-758b6d2fdd4d" />
+<img width="581" height="553" alt="image" src="https://github.com/user-attachments/assets/a174c3af-c74f-4255-93c4-ee178ae14696" />
 
 </details>
 
 <details>
 <summary><h2>Cleaning up</h2></summary>
 
-The simplest way to delete all the resources you just created is to type "Resource Groups" in the search bar and delete the group that you created earlier.
+The service has a delete button. However, it is possible that other resources have been created. Therfore, deleting the entire resource group is usually safer. 
 
-![Deleting a service](README_images/resource_group.png)
+<img width="671" height="160" alt="image" src="https://github.com/user-attachments/assets/6feb4d63-0d1d-47e0-a5d4-130fa9011690" />
 
 </details>
 
